@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karakterstatistik</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>📊 Karakterstatistik</h1>
+      </header>
+
+      <div class="input-section">
+        <label for="grades-input">Indtast karakterer (kommasepareret):</label>
+        <textarea
+          id="grades-input"
+          placeholder="Eksempel: 7, 10, 4, 12, 7, 10, 02, 7, 10, 12, 4, 7"
+          rows="4"
+        ></textarea>
+        <div class="button-group">
+          <button id="analyze-btn" class="primary-btn">
+            Analyser karakterer
+          </button>
+          <button id="clear-btn" class="secondary-btn">Ryd</button>
+        </div>
+      </div>
+
+      <div id="results" class="results-section" style="display: none">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Gennemsnit</h3>
+            <p class="stat-value" id="mean">-</p>
+          </div>
+          <div class="stat-card">
+            <h3>Median</h3>
+            <p class="stat-value" id="median">-</p>
+          </div>
+          <div class="stat-card">
+            <h3>Hyppigste karakter</h3>
+            <p class="stat-value" id="mode">-</p>
+          </div>
+          <div class="stat-card">
+            <h3>Beståelsesprocent</h3>
+            <p class="stat-value" id="pass-rate">-</p>
+            <p class="stat-context" id="failed-count"></p>
+          </div>
+          <div class="stat-card">
+            <h3>Antal studerende</h3>
+            <p class="stat-value" id="total">-</p>
+          </div>
+        </div>
+
+        <div class="charts-section">
+          <div class="chart-container">
+            <h3>Karakterfordeling</h3>
+            <canvas id="distribution-chart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
