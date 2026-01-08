@@ -224,8 +224,7 @@ function createDistributionChart(grades) {
         },
         x: {
           title: {
-            display: true,
-            text: "Karakter",
+            display: false,
           },
           grid: {
             display: false,

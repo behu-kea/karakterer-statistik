@@ -233,3 +233,21 @@ canvas {
     flex: 1;
   }
 }
+
+.attribution {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.attribution a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
