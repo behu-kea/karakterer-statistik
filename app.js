@@ -210,6 +210,7 @@ function createDistributionChart(grades) {
       },
       scales: {
         y: {
+          display: false,
           beginAtZero: true,
           grace: "10%",
           ticks: {
